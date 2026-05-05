@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.env
+# Virtual environment
+.venv/
+db_setup.py
+openings/a.tsv
+openings/b.tsv
+openings/c.tsv
+openings/d.tsv
+openings/e.tsv
+puzzles/lichess_db_puzzle.csv
+puzzles/
+engines/mac_fish/stockfish
+engines/wind_fish/stockfish
+engines/linux_fish/stockfish
+
+
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/
+# PyCharm
+.idea/

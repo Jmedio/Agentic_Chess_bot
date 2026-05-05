@@ -1,0 +1,11 @@
+chess
+langchain
+langchain-openai
+langchain-core
+langchain-community
+streamlit
+faiss-cpu
+
+
+
+
