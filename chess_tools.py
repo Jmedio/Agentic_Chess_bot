@@ -39,9 +39,16 @@ def _find_stockfish() -> str:
     if os.path.exists(local):
         return local
 
+    # 1. Try the standard path check
     system = shutil.which("stockfish")
     if system:
         return system
+
+    # 2. STREAMLIT CLOUD FALLBACK: Explicitly check Debian package locations
+    if os.path.exists("/usr/games/stockfish"):
+        return "/usr/games/stockfish"
+    if os.path.exists("/usr/bin/stockfish"):
+        return "/usr/bin/stockfish"
 
     raise FileNotFoundError(
         "Stockfish not found. For local dev, place the binary in engines/. "
